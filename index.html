@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WAMI CLUB WEARS — Classy & Timeless</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{cloud:{50:'#FDFBF7',100:'#F7F3EB',200:'#EDE8DC',300:'#E0D8C8',400:'#D4CCBC',500:'#B8AE9C'},teal:{50:'#EFF7F7',100:'#D9EEED',200:'#B3DDDB',300:'#7CC5C3',400:'#4A9E9E',500:'#2D7A7A',600:'#1E5C5C',700:'#164A4A',800:'#0F3838',900:'#092626'},gold:{300:'#D4B97A',400:'#C4A265',500:'#A8853F',600:'#8C6D33'}},fontFamily:{display:['"Cormorant Garamond"','serif'],body:['"DM Sans"','sans-serif']}}}}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:#F7F3EB;color:#1a1a1a;overflow-x:hidden}
+::selection{background:#4A9E9E;color:#fff}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#EDE8DC}::-webkit-scrollbar-thumb{background:#B8AE9C;border-radius:3px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes slideR{from{transform:translateX(100%)}to{transform:translateX(0)}}
+@keyframes slideD{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes toastIn{from{opacity:0;transform:translateY(20px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes toastOut{from{opacity:1}to{opacity:0;transform:translateY(-10px)}}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0%}}
+@keyframes drawLine{from{stroke-dashoffset:1000}to{stroke-dashoffset:0}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.afu{animation:fadeUp .8s cubic-bezier(.25,.46,.45,.94) both}
+.asr{animation:slideR .4s cubic-bezier(.25,.46,.45,.94) both}
+.asd{animation:slideD .3s ease both}
+.d1{animation-delay:.15s}.d2{animation-delay:.3s}.d3{animation-delay:.45s}.d4{animation-delay:.6s}.d5{animation-delay:.75s}.d6{animation-delay:.9s}.d7{animation-delay:1.05s}.d8{animation-delay:1.2s}
+.marq{animation:marquee 30s linear infinite}.marq:hover{animation-play-state:paused}
+.pc:hover .pi{transform:scale(1.05)}.pc:hover .qa{opacity:1;transform:translateY(0)}.pc:hover .wb{opacity:1}
+.qa{opacity:0;transform:translateY(10px);transition:all .3s ease}.wb{opacity:0;transition:opacity .3s ease}
+.cc:hover .ci{transform:scale(1.08)}.cc:hover .co{background:rgba(0,0,0,.3)}
+.sb.active{background:#1E5C5C;color:#fff;border-color:#1E5C5C}
+.fc.active{background:#1E5C5C;color:#fff;border-color:#1E5C5C}
+.po.active{border-color:#4A9E9E;background:#EFF7F7}
+.po.active .pr{background:#4A9E9E;border-color:#4A9E9E}
+.pr{width:18px;height:18px;border:2px solid #D4CCBC;border-radius:50%;transition:all .2s;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.po.active .pr::after{content:'';width:8px;height:8px;background:#fff;border-radius:50%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:#4A9E9E!important;box-shadow:0 0 0 3px rgba(74,158,158,.1)!important}
+.nl{position:relative}.nl::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:#1E5C5C;transition:width .3s}.nl:hover::after{width:100%}
+.ti{transition:transform .3s}.ti:hover{transform:translateY(-3px)}
+.rb{height:4px;border-radius:2px;background:#EDE8DC;overflow:hidden}.rbf{height:100%;border-radius:2px;background:#C4A265;transition:width .8s}
+.lo:hover .lov{opacity:1}.lov{opacity:0;transition:opacity .4s}
+.ig:hover .igo{opacity:1}.igo{opacity:0;transition:opacity .3s}
+.tb.active{color:#1E5C5C;border-bottom-color:#1E5C5C}
+.ckb{transform:translateY(100%);transition:transform .5s cubic-bezier(.25,.46,.45,.94)}.ckb.show{transform:translateY(0)}
+#btt{transition:all .3s}
+.credit-link{transition:all .3s ease}
+.credit-link:hover .credit-heart{animation:float 1.2s ease-in-out infinite}
+.credit-link:hover .credit-text{color:#E1306C}
+.feature-panel{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.25,.46,.45,.94)}
+.feature-panel.visible{opacity:1;transform:translateY(0)}
+.hero-frame{opacity:0;animation:drawLine 1.5s ease both .6s}
+.toast-enter{animation:toastIn .3s ease both}
+.toast-exit{animation:toastOut .3s ease both}
+</style>
+</head>
+<body>
+
+<div id="loader" class="fixed inset-0 z-[300] bg-cloud-100 flex items-center justify-center">
+<div class="text-center"><p class="font-display text-3xl text-teal-800 tracking-wide mb-2">WAMI</p><p class="text-[10px] tracking-[.3em] uppercase text-cloud-500">Club Wears</p>
+<div class="mt-6 w-32 h-0.5 bg-cloud-300 rounded-full overflow-hidden mx-auto"><div class="h-full bg-teal-500 rounded-full" style="animation:shimmer 1.5s infinite;background:linear-gradient(90deg,#4A9E9E,#7CC5C3,#4A9E9E);background-size:200% 100%"></div></div></div>
+</div>
+
+<div id="tc" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[200] flex flex-col gap-2 items-center pointer-events-none"></div>
+
+<div id="annbar" class="bg-teal-700 text-white py-2 overflow-hidden relative z-[110]">
+<div class="marq flex whitespace-nowrap" style="width:max-content">
+<span class="mx-8 text-[11px] tracking-wide">✦ Complimentary Shipping on All Orders ✦</span>
+<span class="mx-8 text-[11px] tracking-wide">✦ New Season 2025 — Shop Now ✦</span>
+<span class="mx-8 text-[11px] tracking-wide">✦ Use Code WAMI10 for 10% Off ✦</span>
+<span class="mx-8 text-[11px] tracking-wide">✦ Pay Later with Klarna ✦</span>
+<span class="mx-8 text-[11px] tracking-wide">✦ Complimentary Shipping on All Orders ✦</span>
+<span class="mx-8 text-[11px] tracking-wide">✦ New Season 2025 — Shop Now ✦</span>
+<span class="mx-8 text-[11px] tracking-wide">✦ Use Code WAMI10 for 10% Off ✦</span>
+<span class="mx-8 text-[11px] tracking-wide">✦ Pay Later with Klarna ✦</span>
+</div>
+<button onclick="document.getElementById('annbar').style.display='none'" class="absolute right-3 top-1/2 -translate-y-1/2 text-white/60 hover:text-white"><i data-lucide="x" class="w-3.5 h-3.5"></i></button>
+</div>
+
+<nav id="nav" class="fixed left-0 right-0 z-[100] transition-all duration-500">
+<div class="max-w-7xl mx-auto px-4 sm:px-6">
+<div class="flex items-center justify-between h-16 sm:h-20">
+<button id="mmb" class="lg:hidden p-2 -ml-2"><i data-lucide="menu" class="w-5 h-5"></i></button>
+<a href="#" onclick="nav_('home');return false" class="flex items-center gap-2"><span class="font-display text-xl sm:text-2xl font-semibold tracking-wide text-teal-800">WAMI</span><span class="hidden sm:inline font-body text-[10px] tracking-[.25em] uppercase text-cloud-500 leading-tight">Club Wears</span></a>
+<div class="hidden lg:flex items-center gap-8">
+<a href="#" onclick="nav_('home');return false" class="nl text-xs tracking-[.15em] uppercase font-medium">Home</a>
+<a href="#" onclick="nav_('shop');return false" class="nl text-xs tracking-[.15em] uppercase font-medium">Shop</a>
+<a href="#" onclick="nav_('shop',{category:'party-wear'});return false" class="nl text-xs tracking-[.15em] uppercase font-medium">Party Wear</a>
+<a href="#" onclick="nav_('shop',{category:'western'});return false" class="nl text-xs tracking-[.15em] uppercase font-medium">Western</a>
+<a href="#" onclick="nav_('shop',{category:'modest-wear'});return false" class="nl text-xs tracking-[.15em] uppercase font-medium">Modest Wear</a>
+</div>
+<div class="flex items-center gap-2 sm:gap-3">
+<button onclick="togSearch()" class="p-2"><i data-lucide="search" class="w-5 h-5"></i></button>
+<button onclick="togWish()" class="p-2 relative hidden sm:block"><i data-lucide="heart" class="w-5 h-5"></i><span id="wb" class="absolute -top-0.5 -right-0.5 w-5 h-5 bg-gold-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center hidden">0</span></button>
+<button id="cbtn" class="p-2 relative" onclick="togCart()"><i data-lucide="shopping-bag" class="w-5 h-5"></i><span id="cb" class="absolute -top-0.5 -right-0.5 w-5 h-5 bg-teal-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center hidden">0</span></button>
+</div>
+</div></div>
+</nav>
+
+<div id="mm" class="fixed inset-0 z-[150] hidden">
+<div class="absolute inset-0 bg-teal-800/95 backdrop-blur-md" onclick="closeMM()"></div>
+<div class="relative h-full flex flex-col items-center justify-center text-center px-8">
+<button onclick="closeMM()" class="absolute top-5 right-5 p-2 text-white/80 hover:text-white"><i data-lucide="x" class="w-6 h-6"></i></button>
+<div class="space-y-5">
+<a href="#" onclick="nav_('home');closeMM();return false" class="block font-display text-3xl text-white hover:text-gold-400">Home</a>
+<a href="#" onclick="nav_('shop');closeMM();return false" class="block font-display text-3xl text-white hover:text-gold-400">Shop All</a>
+<a href="#" onclick="nav_('shop',{category:'party-wear'});closeMM();return false" class="block font-display text-3xl text-white hover:text-gold-400">Party Wear</a>
+<a href="#" onclick="nav_('shop',{category:'western'});closeMM();return false" class="block font-display text-3xl text-white hover:text-gold-400">Western</a>
+<a href="#" onclick="nav_('shop',{category:'modest-wear'});closeMM();return false" class="block font-display text-3xl text-white hover:text-gold-400">Modest Wear</a>
+</div></div></div>
+
+<div id="sd" class="fixed inset-0 z-[120] hidden">
+<div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="togSearch()"></div>
+<div class="absolute top-0 left-0 w-full bg-cloud-50 shadow-2xl asd"><div class="max-w-3xl mx-auto px-4 sm:px-6 py-6">
+<div class="flex items-center gap-3 mb-4"><i data-lucide="search" class="w-5 h-5 text-cloud-500 flex-shrink-0"></i><input id="si" type="text" placeholder="Search dresses, tops, blazers..." class="flex-1 bg-transparent text-lg text-teal-800 placeholder:text-cloud-400 border-none" oninput="doSearch(this.value)"><button onclick="togSearch()" class="p-2"><i data-lucide="x" class="w-5 h-5"></i></button></div>
+<div id="sr" class="border-t border-cloud-300 pt-4"></div>
+<div id="ss" class="border-t border-cloud-300 pt-4 mt-4"><p class="text-xs tracking-wide uppercase font-semibold text-teal-700 mb-3">Popular Searches</p>
+<div class="flex flex-wrap gap-2"><button onclick="document.getElementById('si').value='Blazer';doSearch('Blazer')" class="px-3 py-1.5 bg-cloud-200 rounded-full text-xs hover:bg-cloud-300 transition-colors">Blazer Dress</button><button onclick="document.getElementById('si').value='Sequin';doSearch('Sequin')" class="px-3 py-1.5 bg-cloud-200 rounded-full text-xs hover:bg-cloud-300 transition-colors">Sequin Gown</button><button onclick="document.getElementById('si').value='Modest';doSearch('Modest')" class="px-3 py-1.5 bg-cloud-200 rounded-full text-xs hover:bg-cloud-300 transition-colors">Modest Wear</button><button onclick="document.getElementById('si').value='Lace';doSearch('Lace')" class="px-3 py-1.5 bg-cloud-200 rounded-full text-xs hover:bg-cloud-300 transition-colors">Lace Set</button></div></div>
+</div></div></div>
+
+<div id="cd" class="fixed inset-0 z-[120] hidden">
+<div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="togCart()"></div>
+<div class="absolute right-0 top-0 h-full w-full max-w-md bg-cloud-50 shadow-2xl asr flex flex-col">
+<div class="flex items-center justify-between p-6 border-b border-cloud-300"><h3 class="font-display text-2xl text-teal-800">Your Bag</h3><button onclick="togCart()" class="p-2"><i data-lucide="x" class="w-5 h-5"></i></button></div>
+<div id="ci" class="flex-1 overflow-y-auto p-6"></div>
+<div id="cf" class="border-t border-cloud-300 p-6"></div>
+</div></div>
+
+<div id="wd" class="fixed inset-0 z-[120] hidden">
+<div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="togWish()"></div>
+<div class="absolute right-0 top-0 h-full w-full max-w-md bg-cloud-50 shadow-2xl asr flex flex-col">
+<div class="flex items-center justify-between p-6 border-b border-cloud-300"><h3 class="font-display text-2xl text-teal-800">Wishlist</h3><button onclick="togWish()" class="p-2"><i data-lucide="x" class="w-5 h-5"></i></button></div>
+<div id="wi" class="flex-1 overflow-y-auto p-6"></div>
+</div></div>
+
+<div id="sgm" class="fixed inset-0 z-[130] hidden items-center justify-center p-4" style="display:none">
+<div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeSG()"></div>
+<div class="relative bg-cloud-50 rounded-2xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 afu">
+<button onclick="closeSG()" class="absolute top-4 right-4 p-2"><i data-lucide="x" class="w-5 h-5"></i></button>
+<h3 class="font-display text-2xl text-teal-800 mb-1">Size & Fit Guide</h3>
+<p class="text-sm text-cloud-500 mb-6">All measurements in inches.</p>
+<div class="overflow-x-auto"><table class="w-full text-sm"><thead><tr class="border-b-2 border-teal-500"><th class="text-left py-3 pr-4 font-semibold text-teal-700">Size</th><th class="text-center py-3 px-3 font-semibold text-teal-700">Bust</th><th class="text-center py-3 px-3 font-semibold text-teal-700">Waist</th><th class="text-center py-3 px-3 font-semibold text-teal-700">Hips</th><th class="text-center py-3 pl-3 font-semibold text-teal-700">Length</th></tr></thead>
+<tbody class="text-cloud-500"><tr class="border-b border-cloud-200"><td class="py-3 pr-4 font-medium text-teal-800">XS</td><td class="text-center py-3 px-3">32</td><td class="text-center py-3 px-3">26</td><td class="text-center py-3 px-3">35</td><td class="text-center py-3 pl-3">38</td></tr><tr class="border-b border-cloud-200"><td class="py-3 pr-4 font-medium text-teal-800">S</td><td class="text-center py-3 px-3">34</td><td class="text-center py-3 px-3">28</td><td class="text-center py-3 px-3">37</td><td class="text-center py-3 pl-3">39</td></tr><tr class="border-b border-cloud-200"><td class="py-3 pr-4 font-medium text-teal-800">M</td><td class="text-center py-3 px-3">36</td><td class="text-center py-3 px-3">30</td><td class="text-center py-3 px-3">39</td><td class="text-center py-3 pl-3">40</td></tr><tr class="border-b border-cloud-200"><td class="py-3 pr-4 font-medium text-teal-800">L</td><td class="text-center py-3 px-3">38</td><td class="text-center py-3 px-3">32</td><td class="text-center py-3 px-3">41</td><td class="text-center py-3 pl-3">41</td></tr><tr><td class="py-3 pr-4 font-medium text-teal-800">XL</td><td class="text-center py-3 px-3">40</td><td class="text-center py-3 px-3">34</td><td class="text-center py-3 px-3">43</td><td class="text-center py-3 pl-3">42</td></tr></tbody></table></div>
+<div class="mt-6 p-4 bg-teal-50 rounded-xl"><div class="flex items-start gap-3"><i data-lucide="ruler" class="w-5 h-5 text-teal-500 mt-0.5 flex-shrink-0"></i><div><p class="text-sm font-semibold text-teal-700 mb-1">How to Measure</p><p class="text-xs text-teal-600 leading-relaxed"><strong>Bust:</strong> Fullest part. <strong>Waist:</strong> Natural waistline. <strong>Hips:</strong> Widest part. <strong>Length:</strong> Shoulder to hem.</p></div></div></div>
+<p class="mt-4 text-xs text-cloud-500">WhatsApp us at <span class="text-teal-600 font-medium">+91 98765 43210</span></p>
+</div></div>
+
+<div id="zm" class="fixed inset-0 z-[130] hidden items-center justify-center bg-black/90" style="display:none" onclick="closeZ()">
+<button class="absolute top-4 right-4 p-2 text-white/80 hover:text-white z-10"><i data-lucide="x" class="w-6 h-6"></i></button>
+<img id="zmi" class="max-w-[90vw] max-h-[90vh] object-contain" src="" alt="">
+</div>
+
+<div id="fqm" class="fixed inset-0 z-[130] hidden items-center justify-center p-4" style="display:none">
+<div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeFQ()"></div>
+<div class="relative bg-cloud-50 rounded-2xl max-w-xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 afu">
+<button onclick="closeFQ()" class="absolute top-4 right-4 p-2"><i data-lucide="x" class="w-5 h-5"></i></button>
+<h3 class="font-display text-2xl text-teal-800 mb-6">FAQ</h3>
+<div class="space-y-3" id="faq-list"></div>
+</div></div>
+
+<div id="ckb" class="ckb fixed bottom-0 left-0 right-0 z-[90] bg-teal-800 text-white p-4 sm:p-5">
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center gap-4">
+<div class="flex-1 text-sm text-teal-100/80">We use cookies to enhance your experience.</div>
+<div class="flex gap-2 flex-shrink-0"><button onclick="document.getElementById('ckb').classList.remove('show')" class="bg-white text-teal-800 px-5 py-2 rounded-full text-xs tracking-wide uppercase font-semibold hover:bg-cloud-100 transition-colors">Accept</button><button onclick="document.getElementById('ckb').classList.remove('show')" class="border border-white/30 text-white px-5 py-2 rounded-full text-xs tracking-wide uppercase font-medium hover:border-white/60 transition-colors">Decline</button></div>
+</div></div>
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-20 right-6 z-50 w-10 h-10 bg-white border border-cloud-300 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:border-teal-400 opacity-0 pointer-events-none translate-y-4"><i data-lucide="chevron-up" class="w-4 h-4 text-teal-700"></i></button>
+
+<div data-view="home" class="view-section">
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <div class="absolute inset-0">
+        <img src="https://picsum.photos/seed/wami-cinematic-night/1600/1100.jpg" alt="WAMI Club Wears" class="w-full h-full object-cover scale-110" style="animation:scaleIn 2s ease both">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70"></div>
+    </div>
+    <div class="absolute inset-6 sm:inset-10 lg:inset-16 pointer-events-none">
+        <svg class="w-full h-full" viewBox="0 0 400 400" fill="none" preserveAspectRatio="none">
+            <rect x="40" y="40" width="320" height="320" rx="0" stroke="rgba(196,162,101,0.3)" stroke-width="1" class="hero-frame"/>
+        </svg>
+    </div>
+    <div class="relative z-10 text-center px-6 max-w-2xl">
+        <div class="afu mb-6 sm:mb-8">
+            <p class="text-gold-400 text-[10px] sm:text-xs tracking-[.4em] uppercase font-medium">Established 2023 · Made in India</p>
+        </div>
+        <h1 class="afu d1 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white leading-[0.9] mb-4 sm:mb-6 tracking-wide">WAMI</h1>
+        <div class="afu d3 flex items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+            <span class="w-12 sm:w-20 h-px bg-gradient-to-r from-transparent via-gold-400/60 to-transparent"></span>
+            <p class="text-gold-400 text-xs sm:text-sm tracking-[.3em] uppercase font-medium">Club Wears</p>
+            <span class="w-12 sm:w-20 h-px bg-gradient-to-r from-transparent via-gold-400/60 to-transparent"></span>
+        </div>
+        <p class="afu d5 text-white/45 text-sm sm:text-base font-light leading-relaxed mb-10 sm:mb-14 max-w-lg mx-auto">Where timeless craftsmanship meets contemporary design. For the woman who leaves an impression before she speaks a word.</p>
+        <div class="afu d7 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <button onclick="nav_('shop')" class="group bg-white text-teal-800 px-8 sm:px-10 py-4 rounded-full text-xs tracking-[.2em] uppercase font-semibold transition-all hover:bg-cloud-100 hover:shadow-lg hover:shadow-white/10 flex items-center justify-center gap-2">Shop Now <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i></button>
+            <button onclick="nav_('shop',{category:'party-wear'})" class="border border-white/20 text-white px-8 sm:px-10 py-4 rounded-full text-xs tracking-[.2em] uppercase font-medium transition-all hover:border-white/50 hover:bg-white/5 flex items-center justify-center gap-2"><i data-lucide="sparkles" class="w-4 h-4"></i> Party Edit</button>
+        </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 afu d8 flex flex-col items-center gap-2">
+        <span class="text-[9px] tracking-[.35em] uppercase text-white/25 font-medium">Discover</span>
+        <div class="w-px h-10 bg-white/15 relative overflow-hidden"><div class="absolute top-0 left-0 w-full h-4 bg-white/50 animate-bounce"></div></div>
+    </div>
+</section>
+
+<section class="overflow-hidden">
+    <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="feature-panel group cursor-pointer" onclick="nav_('shop',{category:'party-wear'})" id="fp1">
+            <div class="aspect-[3/4] md:aspect-auto md:h-96 overflow-hidden"><img src="https://picsum.photos/seed/wami-feat-party2/600/500.jpg" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"></div>
+            <div class="p-6 sm:p-8 bg-white border-b border-cloud-200 md:border-b-0 md:border-l-2 border-cloud-200">
+                <p class="text-gold-500 text-[10px] tracking-[.25em] uppercase font-medium mb-2">Curated Collection</p>
+                <h3 class="font-display text-2xl sm:text-3xl text-teal-800 mb-3 leading-tight">Party Wear</h3>
+                <p class="text-sm text-cloud-500 leading-relaxed mb-5">Statement pieces designed for your most unforgettable nights.</p>
+                <span class="inline-flex items-center gap-2 text-xs tracking-[.15em] uppercase text-teal-600 font-semibold group-hover:text-teal-400 transition-colors">Explore <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i></span>
+            </div>
+        </div>
+        <div class="feature-panel group cursor-pointer" onclick="nav_('shop',{category:'western'})" id="fp2">
+            <div class="aspect-[3/4] md:aspect-auto md:h-96 overflow-hidden"><img src="https://picsum.photos/seed/wami-feat-west3/600/500.jpg" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"></div>
+            <div class="p-6 sm:p-8 bg-white border-b border-cloud-200 md:border-b-0 md:border-l-2 border-cloud-200">
+                <p class="text-gold-500 text-[10px] tracking-[.25em] uppercase font-medium mb-2">Modern Silhouettes</p>
+                <h3 class="font-display text-2xl sm:text-3xl text-teal-800 mb-3 leading-tight">Western</h3>
+                <p class="text-sm text-cloud-500 leading-relaxed mb-5">Structured blazers, tailored jumpsuits, and contemporary co-ords.</p>
+                <span class="inline-flex items-center gap-2 text-xs tracking-[.15em] uppercase text-teal-600 font-semibold group-hover:text-teal-400 transition-colors">Explore <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i></span>
+            </div>
+        </div>
+        <div class="feature-panel group cursor-pointer" onclick="nav_('shop',{category:'modest-wear'})" id="fp3">
+            <div class="aspect-[3/4] md:aspect-auto md:h-96 overflow-hidden"><img src="https://picsum.photos/seed/wami-feat-modest4/600/500.jpg" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"></div>
+            <div class="p-6 sm:p-8 bg-white md:border-l-2 border-cloud-200">
+                <p class="text-gold-500 text-[10px] tracking-[.25em] uppercase font-medium mb-2">Elegant Coverage</p>
+                <h3 class="font-display text-2xl sm:text-3xl text-teal-800 mb-3 leading-tight">Modest Wear</h3>
+                <p class="text-sm text-cloud-500 leading-relaxed mb-5">Flowing silhouettes with pearl details and premium fabrics.</p>
+                <span class="inline-flex items-center gap-2 text-xs tracking-[.15em] uppercase text-teal-600 font-semibold group-hover:text-teal-400 transition-colors">Explore <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white border-y border-cloud-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 sm:py-6"><div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8">
+<div class="ti flex items-center gap-3 justify-center sm:justify-start"><i data-lucide="truck" class="w-5 h-5 text-teal-500 flex-shrink-0"></i><span class="text-xs text-teal-700 font-medium">Complimentary Shipping</span></div>
+<div class="ti flex items-center gap-3 justify-center sm:justify-start"><i data-lucide="shield-check" class="w-5 h-5 text-teal-500 flex-shrink-0"></i><span class="text-xs text-teal-700 font-medium">SSL Secured Payments</span></div>
+<div class="ti flex items-center gap-3 justify-center sm:justify-start"><i data-lucide="rotate-ccw" class="w-5 h-5 text-teal-500 flex-shrink-0"></i><span class="text-xs text-teal-700 font-medium">7-Day Easy Returns</span></div>
+<div class="ti flex items-center gap-3 justify-center sm:justify-start"><i data-lucide="award" class="w-5 h-5 text-teal-500 flex-shrink-0"></i><span class="text-xs text-teal-700 font-medium">Premium Quality</span></div>
+</div></div></section>
+
+<section class="py-16 sm:py-24"><div class="max-w-7xl mx-auto px-4 sm:px-6">
+<div class="flex items-end justify-between mb-8 sm:mb-12"><div><p class="text-gold-500 text-xs tracking-[.2em] uppercase font-medium mb-2">Just Arrived</p><h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-teal-800 font-light">New Drops</h2></div><a href="#" onclick="nav_('shop');return false" class="hidden sm:flex items-center gap-1 text-xs tracking-[.15em] uppercase text-teal-600 hover:text-teal-400 font-medium group">View All <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i></a></div>
+<div id="hbento" class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 auto-rows-[200px] sm:auto-rows-[240px] md:auto-rows-[260px]"></div>
+</div></section>
+
+<section class="py-16 sm:py-24 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6">
+<div class="text-center mb-10 sm:mb-14"><p class="text-gold-500 text-xs tracking-[.2em] uppercase font-medium mb-2">Curated For You</p><h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-teal-800 font-light">Shop by Collection</h2></div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+<div class="cc group relative overflow-hidden rounded-2xl cursor-pointer aspect-[3/4] sm:aspect-[2/3]" onclick="nav_('shop',{category:'party-wear'})"><img src="https://picsum.photos/seed/wami-pcol1/600/800.jpg" alt="" class="ci w-full h-full object-cover transition-transform duration-700" loading="lazy"><div class="co absolute inset-0 bg-black/40 transition-all duration-500"></div><div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6"><h3 class="font-display text-2xl sm:text-3xl text-white mb-2">Party Wear</h3><p class="text-white/70 text-xs sm:text-sm mb-4 max-w-xs">Statement pieces for unforgettable nights</p><span class="border-b border-white/60 text-white text-xs tracking-[.15em] uppercase pb-1 group-hover:border-white transition-colors">Explore</span></div></div>
+<div class="cc group relative overflow-hidden rounded-2xl cursor-pointer aspect-[3/4] sm:aspect-[2/3]" onclick="nav_('shop',{category:'western'})"><img src="https://picsum.photos/seed/wami-wcol2/600/800.jpg" alt="" class="ci w-full h-full object-cover transition-transform duration-700" loading="lazy"><div class="co absolute inset-0 bg-black/40 transition-all duration-500"></div><div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6"><h3 class="font-display text-2xl sm:text-3xl text-white mb-2">Western</h3><p class="text-white/70 text-xs sm:text-sm mb-4 max-w-xs">Modern silhouettes with sophistication</p><span class="border-b border-white/60 text-white text-xs tracking-[.15em] uppercase pb-1 group-hover:border-white transition-colors">Explore</span></div></div>
+<div class="cc group relative overflow-hidden rounded-2xl cursor-pointer aspect-[3/4] sm:aspect-[2/3]" onclick="nav_('shop',{category:'modest-wear'})"><img src="https://picsum.photos/seed/wami-mcol3/600/800.jpg" alt="" class="ci w-full h-full object-cover transition-transform duration-700" loading="lazy"><div class="co absolute inset-0 bg-black/40 transition-all duration-500"></div><div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6"><h3 class="font-display text-2xl sm:text-3xl text-white mb-2">Modest Wear</h3><p class="text-white/70 text-xs sm:text-sm mb-4 max-w-xs">Elegant coverage, uncompromised style</p><span class="border-b border-white/60 text-white text-xs tracking-[.15em] uppercase pb-1 group-hover:border-white transition-colors">Explore</span></div></div>
+</div></div></section>
+
+<section class="py-16 sm:py-24"><div class="max-w-7xl mx-auto px-4 sm:px-6">
+<div class="flex items-end justify-between mb-8 sm:mb-12"><div><p class="text-gold-500 text-xs tracking-[.2em] uppercase font-medium mb-2">Most Loved</p><h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-teal-800 font-light">Bestsellers</h2></div><a href="#" onclick="nav_('shop');return false" class="hidden sm:flex items-center gap-1 text-xs tracking-[.15em] uppercase text-teal-600 hover:text-teal-400 font-medium group">View All <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i></a></div>
+<div id="hbs" class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"></div>
+</div></section>
+
+<section class="relative overflow-hidden"><div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="aspect-[4/3] lg:aspect-auto"><img src="https://picsum.photos/seed/wami-edit5/800/600.jpg" alt="" class="w-full h-full object-cover" loading="lazy"></div>
+<div class="bg-teal-700 flex items-center p-8 sm:p-12 lg:p-16"><div class="max-w-md">
+<p class="text-gold-400 text-xs tracking-[.2em] uppercase font-medium mb-4">The WAMI Philosophy</p>
+<h2 class="font-display text-3xl sm:text-4xl text-white font-light leading-tight mb-6">Effortless Elegance, <span class="italic">Redefined</span></h2>
+<p class="text-teal-100/80 text-sm leading-relaxed mb-8">Every piece is thoughtfully designed to make you feel confident, beautiful, and uniquely yourself.</p>
+<div class="flex gap-8"><div><span class="font-display text-3xl text-white">500+</span><p class="text-teal-200/60 text-xs mt-1">Styles</p></div><div><span class="font-display text-3xl text-white">50K+</span><p class="text-teal-200/60 text-xs mt-1">Happy Customers</p></div><div><span class="font-display text-3xl text-white">4.8</span><p class="text-teal-200/60 text-xs mt-1">Rating</p></div></div>
+</div></div></div></section>
+
+<section class="py-16 sm:py-24 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6">
+<div class="text-center mb-10 sm:mb-14"><p class="text-gold-500 text-xs tracking-[.2em] uppercase font-medium mb-2">Real Reviews</p><h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-teal-800 font-light">What Our Customers Say</h2></div>
+<div id="htest" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+</div></section>
+
+<section class="py-16 sm:py-24"><div class="max-w-7xl mx-auto px-4 sm:px-6">
+<div class="text-center mb-10 sm:mb-14"><p class="text-gold-500 text-xs tracking-[.2em] uppercase font-medium mb-2">Style Inspiration</p><h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-teal-800 font-light">The Lookbook</h2></div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+<div class="lo relative overflow-hidden rounded-2xl cursor-pointer aspect-[3/4] group" onclick="nav_('shop',{category:'party-wear'})"><img src="https://picsum.photos/seed/wami-lk1/400/530.jpg" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"><div class="lov absolute inset-0 bg-black/50 flex items-end p-4"><p class="font-display text-lg text-white">Date Night Glam</p></div></div>
+<div class="lo relative overflow-hidden rounded-2xl cursor-pointer aspect-[3/4] md:row-span-2 group" onclick="nav_('shop',{category:'western'})"><img src="https://picsum.photos/seed/wami-lk2/400/800.jpg" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"><div class="lov absolute inset-0 bg-black/50 flex items-end p-4"><p class="font-display text-lg text-white">Power Dressing</p></div></div>
+<div class="lo relative overflow-hidden rounded-2xl cursor-pointer aspect-[3/4] group" onclick="nav_('shop',{category:'modest-wear'})"><img src="https://picsum.photos/seed/wami-lk3/400/530.jpg" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"><div class="lov absolute inset-0 bg-black/50 flex items-end p-4"><p class="font-display text-lg text-white">Graceful Modest</p></div></div>
+<div class="lo relative overflow-hidden rounded-2xl cursor-pointer aspect-[3/4] group" onclick="nav_('shop',{category:'party-wear'})"><img src="https://picsum.photos/seed/wami-lk4/400/530.jpg" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"><div class="lov absolute inset-0 bg-black/50 flex items-end p-4"><p class="font-display text-lg text-white">Cocktail Hour</p></div></div>
+<div class="lo relative overflow-hidden rounded-2xl cursor-pointer aspect-[3/4] group" onclick="nav_('shop')"><img src="https://picsum.photos/seed/wami-lk5/400/530.jpg" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"><div class="lov absolute inset-0 bg-black/50 flex items-end p-4"><p class="font-display text-lg text-white">Weekend Brunch</p></div></div>
+<div class="lo relative overflow-hidden rounded-2xl cursor-pointer aspect-[3/4] group" onclick="nav_('shop')"><img src="https://picsum.photos/seed/wami-lk6/400/530.jpg" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"><div class="lov absolute inset-0 bg-black/50 flex items-end p-4"><p class="font-display text-lg text-white">Festive Elegance</p></div></div>
+</div></div></section>
+
+<section class="py-16 sm:py-20 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6">
+<div class="text-center mb-10"><p class="text-gold-500 text-xs tracking-[.2em] uppercase font-medium mb-2">@wamiclubwears</p><h2 class="font-display text-3xl sm:text-4xl text-teal-800 font-light">Follow Us on Instagram</h2></div>
+<div class="grid grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-3" id="hig"></div>
+</div></section>
+
+<section class="py-16 sm:py-24 relative overflow-hidden"><div class="absolute inset-0"><img src="https://picsum.photos/seed/wami-nlb/1400/500.jpg" alt="" class="w-full h-full object-cover" loading="lazy"><div class="absolute inset-0 bg-teal-800/85"></div></div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6"><div class="max-w-2xl mx-auto text-center">
+<div class="w-12 h-12 mx-auto mb-6 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center"><i data-lucide="crown" class="w-6 h-6 text-gold-400"></i></div>
+<p class="text-gold-400 text-xs tracking-[.2em] uppercase font-medium mb-2">Members Only</p>
+<h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-white font-light mb-4">Exclusive Club Access</h2>
+<p class="text-teal-100/70 text-sm leading-relaxed mb-8 max-w-md mx-auto">Join for early access, members-only pricing, styling tips, and complimentary shipping on every order.</p>
+<form onsubmit="doNL(event)" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+<input type="email" required placeholder="Enter your email" class="flex-1 px-5 py-3.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm text-white placeholder:text-white/40">
+<button type="submit" class="bg-gold-500 hover:bg-gold-400 text-white px-7 py-3.5 rounded-full text-xs tracking-[.15em] uppercase font-semibold transition-all whitespace-nowrap">Join the Club</button>
+</form><p class="mt-4 text-xs text-teal-200/40">No spam. Unsubscribe anytime.</p>
+</div></div></section>
+
+<section class="py-8 bg-cloud-200 border-y border-cloud-300"><div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+<div class="flex items-center gap-2 text-cloud-500"><i data-lucide="lock" class="w-4 h-4"></i><span class="text-[11px] tracking-wide uppercase font-medium">PCI-DSS Level 1</span></div>
+<div class="flex items-center gap-3 text-cloud-500"><span class="text-[11px] tracking-wide uppercase font-medium">We Accept</span><div class="flex gap-2"><span class="px-2 py-1 bg-white rounded text-[10px] font-bold text-cloud-500">VISA</span><span class="px-2 py-1 bg-white rounded text-[10px] font-bold text-cloud-500">MC</span><span class="px-2 py-1 bg-white rounded text-[10px] font-bold text-cloud-500">UPI</span><span class="px-2 py-1 bg-white rounded text-[10px] font-bold text-cloud-500">PayPal</span></div></div>
+<div class="flex items-center gap-2 text-cloud-500"><i data-lucide="calendar" class="w-4 h-4"></i><span class="text-[11px] tracking-wide uppercase font-medium">Pay Later with Klarna</span></div>
+</div></div></section>
+</div>
+
+<div data-view="shop" class="view-section hidden pt-20 sm:pt-24 min-h-screen"><div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
+<div class="mb-6 sm:mb-10"><p class="text-cloud-500 text-xs tracking-wide mb-1"><a href="#" onclick="nav_('home');return false" class="hover:text-teal-600">Home</a> / <span id="sbb" class="text-teal-700">Shop All</span></p><h1 id="stl" class="font-display text-3xl sm:text-4xl text-teal-800 font-light">Shop All</h1></div>
+<div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-6 sm:mb-8 pb-4 border-b border-cloud-300">
+<button onclick="togFP()" class="flex items-center gap-2 px-4 py-2 border border-cloud-300 rounded-full text-xs tracking-wide uppercase font-medium hover:border-teal-400 transition-colors"><i data-lucide="sliders-horizontal" class="w-3.5 h-3.5"></i> Filters</button>
+<div id="afs" class="flex flex-wrap gap-2"></div>
+<span id="spc" class="text-xs text-cloud-400 ml-auto mr-auto sm:ml-0 sm:mr-0"></span>
+<select id="ssel" onchange="S.sort=this.value;rShop()" class="px-3 py-2 bg-white border border-cloud-300 rounded-full text-xs cursor-pointer"><option value="featured">Featured</option><option value="newest">Newest</option><option value="price-low">Price: Low to High</option><option value="price-high">Price: High to Low</option></select>
+</div>
+<div id="fpan" class="hidden mb-8 p-6 bg-white rounded-2xl border border-cloud-200 asd"><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div><label class="text-xs tracking-wide uppercase font-semibold text-teal-700 mb-3 block">Category</label><div class="flex flex-wrap gap-2" id="fcat"></div></div>
+<div><label class="text-xs tracking-wide uppercase font-semibold text-teal-700 mb-3 block">Size</label><div class="flex flex-wrap gap-2" id="fsiz"></div></div>
+<div><label class="text-xs tracking-wide uppercase font-semibold text-teal-700 mb-3 block">Price Range</label><div class="flex flex-wrap gap-2" id="fprc"></div></div>
+<div class="flex items-end"><button onclick="clrF()" class="text-xs text-teal-600 hover:text-teal-400 underline">Clear All</button></div>
+</div></div>
+<div id="sprods" class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5"></div>
+<div id="sempt" class="hidden text-center py-20"><i data-lucide="search-x" class="w-12 h-12 text-cloud-400 mx-auto mb-4"></i><p class="font-display text-xl text-teal-800 mb-2">No products found</p><p class="text-sm text-cloud-500 mb-4">Try adjusting your filters</p><button onclick="clrF()" class="text-xs tracking-wide uppercase text-teal-600 hover:text-teal-400 font-medium">Clear Filters</button></div>
+</div></div>
+
+<div data-view="product" class="view-section hidden pt-16 sm:pt-20 min-h-screen"><div id="pdet" class="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-10"></div></div>
+
+<div data-view="checkout" class="view-section hidden pt-20 sm:pt-24 min-h-screen"><div id="ccon" class="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-10"></div></div>
+
+<div data-view="confirmation" class="view-section hidden pt-20 sm:pt-24 min-h-screen"><div id="ocon" class="max-w-xl mx-auto px-4 sm:px-6 py-12 sm:py-20"></div></div>
+
+<footer class="bg-teal-800 text-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+<div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-12 mb-12">
+<div class="col-span-2 sm:col-span-1 lg:col-span-2"><span class="font-display text-2xl font-semibold tracking-wide">WAMI</span><p class="text-teal-300/60 text-xs mt-1 tracking-[.15em] uppercase">Club Wears</p><p class="text-teal-200/50 text-sm mt-4 leading-relaxed max-w-xs">Premium western party wear for the modern woman.</p>
+<div class="flex gap-4 mt-6"><a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-teal-200/60 hover:bg-gold-500 hover:text-white transition-all"><i data-lucide="instagram" class="w-4 h-4"></i></a><a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-teal-200/60 hover:bg-gold-500 hover:text-white transition-all"><i data-lucide="facebook" class="w-4 h-4"></i></a><a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-teal-200/60 hover:bg-gold-500 hover:text-white transition-all"><i data-lucide="twitter" class="w-4 h-4"></i></a><a href="https://wa.me/919876543210" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-teal-200/60 hover:bg-green-500 hover:text-white transition-all"><i data-lucide="message-circle" class="w-4 h-4"></i></a></div></div>
+<div><h4 class="text-xs tracking-[.15em] uppercase font-semibold text-teal-200/80 mb-4">Shop</h4><ul class="space-y-2.5"><li><a href="#" onclick="nav_('shop',{category:'party-wear'});return false" class="text-sm text-teal-300/60 hover:text-white transition-colors">Party Wear</a></li><li><a href="#" onclick="nav_('shop',{category:'western'});return false" class="text-sm text-teal-300/60 hover:text-white transition-colors">Western</a></li><li><a href="#" onclick="nav_('shop',{category:'modest-wear'});return false" class="text-sm text-teal-300/60 hover:text-white transition-colors">Modest Wear</a></li><li><a href="#" onclick="nav_('shop');return false" class="text-sm text-teal-300/60 hover:text-white transition-colors">New Arrivals</a></li></ul></div>
+<div><h4 class="text-xs tracking-[.15em] uppercase font-semibold text-teal-200/80 mb-4">Help</h4><ul class="space-y-2.5"><li><a href="#" onclick="openSG();return false" class="text-sm text-teal-300/60 hover:text-white transition-colors">Size Guide</a></li><li><a href="#" class="text-sm text-teal-300/60 hover:text-white transition-colors">Shipping Info</a></li><li><a href="#" class="text-sm text-teal-300/60 hover:text-white transition-colors">Returns & Exchange</a></li><li><a href="#" onclick="openFQ();return false" class="text-sm text-teal-300/60 hover:text-white transition-colors">FAQ</a></li></ul></div>
+<div><h4 class="text-xs tracking-[.15em] uppercase font-semibold text-teal-200/80 mb-4">Company</h4><ul class="space-y-2.5"><li><a href="#" class="text-sm text-teal-300/60 hover:text-white transition-colors">About Us</a></li><li><a href="#" class="text-sm text-teal-300/60 hover:text-white transition-colors">Privacy Policy</a></li><li><a href="#" class="text-sm text-teal-300/60 hover:text-white transition-colors">Terms of Service</a></li><li><a href="#" class="text-sm text-teal-300/60 hover:text-white transition-colors">Refund Policy</a></li></ul></div>
+</div>
+<div class="border-t border-teal-700/50 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+<p class="text-xs text-teal-300/40">© 2025 WAMI Club Wears. All rights reserved.</p>
+<div class="flex items-center gap-3"><span class="px-2 py-1 bg-teal-700/50 rounded text-[9px] font-bold text-teal-300/60">VISA</span><span class="px-2 py-1 bg-teal-700/50 rounded text-[9px] font-bold text-teal-300/60">MC</span><span class="px-2 py-1 bg-teal-700/50 rounded text-[9px] font-bold text-teal-300/60">UPI</span><span class="px-2 py-1 bg-teal-700/50 rounded text-[9px] font-bold text-teal-300/60">PayPal</span><span class="px-2 py-1 bg-teal-700/50 rounded text-[9px] font-bold text-teal-300/60">Klarna</span></div>
+</div>
+<div class="border-t border-teal-700/50 pt-6 mt-6 text-center">
+<a href="https://instagram.com/graphic.bishr" target="_blank" rel="noopener noreferrer" class="credit-link inline-flex items-center gap-2 text-sm text-teal-300/50 hover:text-teal-100/80 transition-colors">
+<span class="credit-text text-teal-300/40 transition-colors duration-300">made with</span>
+<span class="credit-heart text-teal-300/40 transition-colors duration-300">❤️</span>
+<span class="credit-text font-semibold tracking-wide transition-colors duration-300">graphic.bishr</span>
+</a>
+</div>
+</div></footer>
+
+<a href="https://wa.me/919876543210" target="_blank" class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-green-500 hover:bg-green-400 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110">
+<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.51-1.655-1.807-.174-.297-.019-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+const P=[
+{id:1,name:'Emerald Satin Blazer Dress',sub:'Signature Collection',cat:'party-wear',price:4999,op:6999,colors:[{n:'Teal',h:'#1A6B6A'},{n:'Black',h:'#1A1A1A'},{n:'Burgundy',h:'#722F37'}],sizes:['XS','S','M','L','XL'],imgs:['wmi-p1a','wmi-p1b','wmi-p1c','wmi-p1d'],isNew:true,isBest:true,desc:'Crafted from luxurious Italian satin with a tailored silhouette and flattering wrap-front design.',fit:'Tailored fit — order your regular size',fab:'Italian Satin with Silk Blend Lining',care:'Dry clean only',len:'38"',revs:[{n:'Priya A.',r:5,t:'Absolutely stunning! The fabric quality is incredible.',d:'2 days ago'},{n:'Meera S.',r:4,t:'Beautiful dress, slightly long for my height.',d:'1 week ago'},{n:'Anjali K.',r:5,t:'Worth every penny.',d:'2 weeks ago'}]},
+{id:2,name:'Midnight Velvet Midi Dress',sub:'Evening Edit',cat:'party-wear',price:3999,op:5499,colors:[{n:'Navy',h:'#1B2A4A'},{n:'Wine',h:'#722F37'}],sizes:['S','M','L','XL'],imgs:['wmi-p2a','wmi-p2b','wmi-p2c','wmi-p2d'],isNew:true,isBest:false,desc:'A showstopping midi in plush velvet with a cowl neckline.',fit:'Relaxed fit — consider sizing down',fab:'Premium Velvet (92% Polyester, 8% Spandex)',care:'Gentle dry clean',len:'42"',revs:[{n:'Riya D.',r:5,t:'The velvet is so soft and rich.',d:'3 days ago'}]},
+{id:3,name:'Ivory Lace Co-ord Set',sub:'Western Essentials',cat:'western',price:4499,op:null,colors:[{n:'Ivory',h:'#FFFFF0'},{n:'Blush',h:'#F5C6C6'}],sizes:['XS','S','M','L'],imgs:['wmi-p3a','wmi-p3b','wmi-p3c','wmi-p3d'],isNew:true,isBest:true,desc:'Intricate French lace overlay on a crepe base.',fit:'True to size',fab:'French Lace over Crepe',care:'Hand wash cold',len:'Top: 15", Pants: 40"',revs:[{n:'Sneha M.',r:5,t:'The lace quality is premium.',d:'5 days ago'}]},
+{id:4,name:'Charcoal Tailored Jumpsuit',sub:'Power Dressing',cat:'western',price:3799,op:4999,colors:[{n:'Charcoal',h:'#36454F'},{n:'Black',h:'#1A1A1A'}],sizes:['XS','S','M','L','XL'],imgs:['wmi-p4a','wmi-p4b','wmi-p4c','wmi-p4d'],isNew:false,isBest:true,desc:'Sharply tailored with structured shoulders and defined waistbelt.',fit:'Structured fit — true to size',fab:'Poly-wool Blend with Stretch',care:'Dry clean',len:'Inseam: 32"',revs:[{n:'Kavya N.',r:5,t:'Office to dinner — this does it all!',d:'1 week ago'}]},
+{id:5,name:'Champagne Sequin Gown',sub:'Red Carpet Edit',cat:'party-wear',price:6999,op:8999,colors:[{n:'Champagne',h:'#F7E7CE'},{n:'Gold',h:'#D4A265'}],sizes:['S','M','L'],imgs:['wmi-p5a','wmi-p5b','wmi-p5c','wmi-p5d'],isNew:true,isBest:false,desc:'Breathtaking floor-length gown with hand-sewn sequin detailing.',fit:'Fitted bodice, flowing skirt',fab:'Sequin on Net with Satin Underlay',care:'Professional dry clean only',len:'58"',revs:[{n:'Nisha P.',r:5,t:'I felt like a celebrity!',d:'4 days ago'}]},
+{id:6,name:'Dusty Rose Modest Abaya',sub:'Graceful Collection',cat:'modest-wear',price:3299,op:null,colors:[{n:'Dusty Rose',h:'#DCAE96'},{n:'Sage',h:'#9CAF88'},{n:'Navy',h:'#1B2A4A'}],sizes:['S','M','L','XL'],imgs:['wmi-p6a','wmi-p6b','wmi-p6c','wmi-p6d'],isNew:false,isBest:true,desc:'Flowing chiffon with subtle pearl embellishments.',fit:'Oversized — order your regular size',fab:'Chiffon with Satin Lining',care:'Gentle hand wash or dry clean',len:'56"',revs:[{n:'Fatima K.',r:5,t:'Modest fashion that is actually stylish!',d:'3 days ago'}]},
+{id:7,name:'Navy Structured Blazer',sub:'Wardrobe Staple',cat:'western',price:2999,op:3999,colors:[{n:'Navy',h:'#1B2A4A'},{n:'Camel',h:'#C19A6B'},{n:'Black',h:'#1A1A1A'}],sizes:['XS','S','M','L','XL'],imgs:['wmi-p7a','wmi-p7b','wmi-p7c','wmi-p7d'],isNew:false,isBest:false,desc:'Perfectly structured single-button blazer with padded shoulders.',fit:'Tailored — true to size',fab:'Premium Poly-blend with Stretch',care:'Dry clean',len:'26"',revs:[{n:'Roshni G.',r:4,t:'Great blazer for the price.',d:'1 week ago'}]},
+{id:8,name:'Sage Green Flowy Maxi',sub:'Graceful Collection',cat:'modest-wear',price:3599,op:null,colors:[{n:'Sage',h:'#9CAF88'},{n:'Dusty Rose',h:'#DCAE96'}],sizes:['S','M','L','XL'],imgs:['wmi-p8a','wmi-p8b','wmi-p8c','wmi-p8d'],isNew:true,isBest:false,desc:'Ethereal maxi in soft sage with modest round neckline.',fit:'Relaxed — true to size',fab:'Viscose Crepe',care:'Machine wash cold',len:'54"',revs:[{n:'Huda S.',r:5,t:'Color is even more beautiful in person!',d:'6 days ago'}]},
+{id:9,name:'Black Crystal Top',sub:'Party Essentials',cat:'party-wear',price:2499,op:3299,colors:[{n:'Black',h:'#1A1A1A'},{n:'Silver',h:'#C0C0C0'}],sizes:['XS','S','M','L'],imgs:['wmi-p9a','wmi-p9b','wmi-p9c','wmi-p9d'],isNew:false,isBest:true,desc:'Hand-placed crystal embellishments on a fitted silhouette.',fit:'Fitted — order your regular size',fab:'Mesh and Crepe with Crystals',care:'Hand wash cold inside out',len:'18"',revs:[{n:'Pooja V.',r:5,t:'Crystals catch light beautifully.',d:'2 days ago'}]},
+{id:10,name:'Cream Pleated Palazzo Set',sub:'Western Essentials',cat:'western',price:3199,op:null,colors:[{n:'Cream',h:'#FFFDD0'},{n:'Teal',h:'#4A9E9E'}],sizes:['XS','S','M','L','XL'],imgs:['wmi-p10a','wmi-p10b','wmi-p10c','wmi-p10d'],isNew:false,isBest:false,desc:'Pleated camisole top with wide-leg palazzo trousers.',fit:'Relaxed — true to size',fab:'Micro-pleated Georgette',care:'Machine wash cold',len:'Top: 17", Pants: 40"',revs:[{n:'Isha L.',r:5,t:'So comfortable yet polished.',d:'4 days ago'}]}
+];
+
+const FAQS=[{q:'How long does delivery take?',a:'Standard: 5-7 business days. Express: 2-3 days in metros.'},{q:'What is your return policy?',a:'Easy returns within 7 days for unworn items with tags.'},{q:'Do you ship internationally?',a:'USA, UK, UAE, Canada, Australia. 10-14 business days.'},{q:'How does Buy Now Pay Later work?',a:'Select Klarna at checkout for 3 interest-free installments.'},{q:'Is my payment secure?',a:'256-bit SSL, PCI-DSS Level 1 compliant.'},{q:'How do I track my order?',a:'WhatsApp message and email with tracking link once shipped.'}];
+const TESTS=[{t:'"The Emerald Satin Blazer Dress exceeded all expectations!"',n:'Priya Anand',l:'Mumbai',av:'PA'},{t:'"Finally found a brand that understands modest fashion."',n:'Fatima Khan',l:'Hyderabad',av:'FK'},{t:'"Consistency is impressive. Size guide was spot on!"',n:'Sneha Mehta',l:'Bangalore',av:'SM'}];
+const img=(s,w,h)=>'https://picsum.photos/seed/'+s+'/'+w+'/'+h+'.jpg';
+const fp=p=>'₹'+p.toLocaleString('en-IN');
+const gd=(o,c)=>Math.round(((o-c)/o)*100);
+
+const S={view:'home',vd:{},cart:JSON.parse(localStorage.getItem('wc')||'[]'),wish:JSON.parse(localStorage.getItem('ww')||'[]'),sp:null,ssz:null,scl:null,fil:{category:'all',size:'all',price:'all'},sort:'featured',co:false,wo:false,so:false,fo:false,rv:JSON.parse(localStorage.getItem('wr')||'[]')};
+const svC=()=>localStorage.setItem('wc',JSON.stringify(S.cart));
+const svW=()=>localStorage.setItem('ww',JSON.stringify(S.wish));
+const svR=()=>localStorage.setItem('wr',JSON.stringify(S.rv));
+
+function nav_(v,d){
+    S.view=v;S.vd=d||{};
+    if(d){
+        if(d.category)S.fil.category=d.category;
+        if(d.productId){S.sp=P.find(p=>p.id===d.productId);if(S.sp){S.rv=S.rv.filter(id=>id!==d.productId);S.rv.unshift(d.productId);S.rv=S.rv.slice(0,8);svR();}}
+        if(d.orderNumber)S.vd.orderNumber=d.orderNumber;
+    }
+    if(v==='shop'){S.ssz=null;S.scl=null;}
+    render();window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function render(){
+    document.querySelectorAll('.view-section').forEach(e=>e.classList.add('hidden'));
+    var el=document.querySelector('[data-view="'+S.view+'"]');
+    if(el)el.classList.remove('hidden');
+    if(S.view==='home')rHome();
+    else if(S.view==='shop')rShop();
+    else if(S.view==='product')rProd();
+    else if(S.view==='checkout')rCheck();
+    else if(S.view==='confirmation')rConf();
+    updB();updN();lucide.createIcons();
+}
+
+function updN(){
+    var n=document.getElementById('nav'),bar=document.getElementById('annbar');
+    var bh=bar.offsetHeight||0;n.style.top=bh+'px';
+    if(S.view==='home'&&window.scrollY<80){
+        n.style.background='transparent';n.style.backdropFilter='none';n.style.borderBottom='none';
+        var links=n.querySelectorAll('a,button');
+        for(var i=0;i<links.length;i++){if(!links[i].closest('#cbtn')&&links[i].id!=='mmb')links[i].style.color='rgba(255,255,255,0.9)';}
+        document.getElementById('cbtn').style.color='rgba(255,255,255,0.9)';
+        document.getElementById('mmb').style.color='rgba(255,255,255,0.9)';
+    }else{
+        n.style.background='rgba(247,243,235,0.95)';n.style.backdropFilter='blur(12px)';n.style.borderBottom='1px solid #EDE8DC';
+        var links=n.querySelectorAll('a,button');
+        for(var i=0;i<links.length;i++){if(!links[i].closest('#cbtn')&&links[i].id!=='mmb')links[i].style.color='';}
+        document.getElementById('cbtn').style.color='';document.getElementById('mmb').style.color='';
+    }
+    var b=document.getElementById('btt');
+    if(window.scrollY>600){b.style.opacity='1';b.style.pointerEvents='auto';b.style.transform='translateY(0)';}
+    else{b.style.opacity='0';b.style.pointerEvents='none';b.style.transform='translateY(1rem)';}
+}
+window.addEventListener('scroll',updN);
+
+document.getElementById('mmb').addEventListener('click',function(){document.getElementById('mm').classList.remove('hidden');document.body.style.overflow='hidden';lucide.createIcons();});
+function closeMM(){document.getElementById('mm').classList.add('hidden');document.body.style.overflow='';}
+
+function togSearch(){S.so=!S.so;var d=document.getElementById('sd');if(S.so){d.classList.remove('hidden');document.body.style.overflow='hidden';setTimeout(function(){document.getElementById('si').focus();},100);lucide.createIcons();}else{d.classList.add('hidden');document.body.style.overflow='';}}
+function doSearch(q){var r=document.getElementById('sr'),s=document.getElementById('ss');if(!q.trim()){r.innerHTML='';s.style.display='';return;}s.style.display='none';var ql=q.toLowerCase();var m=P.filter(function(p){return p.name.toLowerCase().includes(ql)||p.cat.includes(ql)||p.desc.toLowerCase().includes(ql);});if(!m.length){r.innerHTML='<p class="text-sm text-cloud-500 py-4">No results for "'+q+'"</p>';return;}r.innerHTML=m.slice(0,6).map(function(p){return '<div class="flex items-center gap-4 py-3 cursor-pointer hover:bg-cloud-100 rounded-xl px-2 -mx-2 transition-colors" onclick="togSearch();nav_(\'product\',{productId:'+p.id+'})"><div class="w-14 h-16 rounded-lg overflow-hidden bg-cloud-200 flex-shrink-0"><img src="'+img(p.imgs[0],140,180)+'" class="w-full h-full object-cover"></div><div class="flex-1 min-w-0"><p class="text-sm text-teal-800 truncate">'+p.name+'</p><p class="text-xs text-cloud-500">'+p.sub+' · '+fp(p.price)+'</p></div></div>';}).join('');lucide.createIcons();}
+
+function togWish(){S.wo=!S.wo;var d=document.getElementById('wd');if(S.wo){d.classList.remove('hidden');document.body.style.overflow='hidden';rWD();lucide.createIcons();}else{d.classList.add('hidden');document.body.style.overflow='';}}
+function togW(p){var i=S.wish.indexOf(p);if(i>-1){S.wish.splice(i,1);toast('Removed from wishlist','info');}else{S.wish.push(p);var pr=P.find(function(x){return x.id===p;});toast((pr?pr.name:'Item')+' added to wishlist','success');}svW();updB();if(S.wo)rWD();if(S.view==='shop')rShop();if(S.view==='product')rProd();}
+
+function rWD(){var d=document.getElementById('wi');if(!S.wish.length){d.innerHTML='<div class="flex flex-col items-center justify-center h-full text-center"><i data-lucide="heart" class="w-12 h-12 text-cloud-400 mb-4"></i><p class="font-display text-xl text-teal-800 mb-2">Your wishlist is empty</p><p class="text-sm text-cloud-500 mb-6">Save your favourites here</p><button onclick="togWish();nav_(\'shop\')" class="bg-teal-600 hover:bg-teal-500 text-white px-6 py-3 rounded-full text-xs tracking-[.15em] uppercase font-medium transition-colors">Browse</button></div>';lucide.createIcons();return;}d.innerHTML=S.wish.map(function(pid){var p=P.find(function(x){return x.id===pid;});if(!p)return '';return '<div class="flex gap-4 mb-5 pb-5 border-b border-cloud-200 last:border-0"><div class="w-20 h-24 rounded-xl overflow-hidden bg-cloud-200 flex-shrink-0 cursor-pointer" onclick="togWish();nav_(\'product\',{productId:'+p.id+'})"><img src="'+img(p.imgs[0],200,260)+'" class="w-full h-full object-cover"></div><div class="flex-1 min-w-0"><p class="font-display text-sm text-teal-800 leading-tight mb-1 truncate">'+p.name+'</p><p class="text-xs text-cloud-500 mb-2">'+fp(p.price)+'</p><div class="flex gap-2"><button onclick="togWish();nav_(\'product\',{productId:'+p.id+'})" class="text-[10px] tracking-wide uppercase text-teal-600 font-medium">View</button><button onclick="qAdd('+p.id+');togW('+p.id+');rWD()" class="text-[10px] tracking-wide uppercase text-gold-600 font-medium">Add to Bag</button></div></div><button onclick="togW('+p.id+')" class="text-cloud-400 hover:text-red-500 self-start"><i data-lucide="x" class="w-4 h-4"></i></button></div>';}).join('');lucide.createIcons();}
+
+function rHome(){
+    var bp=P.filter(function(p){return p.isNew||p.isBest;}).slice(0,7);
+    document.getElementById('hbento').innerHTML=bp.map(function(p,i){var cs='',rs='';if(i===0){cs='md:col-span-2';rs='md:row-span-2';}if(i===3)return '<div class="'+cs+' '+rs+' rounded-2xl overflow-hidden bg-teal-600 flex flex-col items-center justify-center p-6 text-center cursor-pointer hover:bg-teal-500 transition-colors" onclick="nav_(\'shop\',{category:\'party-wear\'})"><p class="text-gold-300 text-[10px] tracking-[.2em] uppercase font-medium mb-2">Limited Edition</p><p class="font-display text-xl sm:text-2xl text-white leading-tight mb-3">The Party<br>Collection</p><span class="border-b border-white/50 text-white text-[10px] tracking-[.15em] uppercase pb-0.5">Shop Now</span></div>';var dc=p.op?gd(p.op,p.price):null;return '<div class="pc '+cs+' '+rs+' rounded-2xl overflow-hidden relative cursor-pointer group" onclick="nav_(\'product\',{productId:'+p.id+'})"><img src="'+img(p.imgs[0],600,800)+'" alt="'+p.name+'" class="pi w-full h-full object-cover transition-transform duration-700" loading="lazy"><div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>'+(p.isNew?'<span class="absolute top-3 left-3 bg-white text-teal-700 text-[9px] tracking-[.15em] uppercase font-bold px-2.5 py-1 rounded-full">New</span>':'')+(dc?'<span class="absolute top-3 right-3 bg-teal-500 text-white text-[9px] tracking-wider font-bold px-2 py-1 rounded-full">-'+dc+'%</span>':'')+'<button onclick="event.stopPropagation();togW('+p.id+')" class="wb absolute top-3 '+(dc?'right-12':'right-3')+' w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all"><i data-lucide="heart" class="w-3.5 h-3.5 '+(S.wish.includes(p.id)?'text-red-500 fill-red-500':'text-teal-700')+'"></i></button><div class="absolute bottom-0 left-0 right-0 p-3 sm:p-4"><p class="font-display text-sm sm:text-lg text-white leading-tight mb-1 line-clamp-2">'+p.name+'</p><div class="flex items-center gap-2"><span class="text-sm sm:text-base text-white font-medium">'+fp(p.price)+'</span>'+(p.op?'<span class="text-xs text-white/50 line-through">'+fp(p.op)+'</span>':'')+'</div></div><div class="qa absolute bottom-16 sm:bottom-20 left-1/2 -translate-x-1/2"><button onclick="event.stopPropagation();qAdd('+p.id+')" class="bg-white text-teal-700 px-5 py-2 rounded-full text-[10px] tracking-[.1em] uppercase font-semibold hover:bg-teal-50 transition-colors shadow-lg">Quick Add</button></div></div>';}).join('');
+    document.getElementById('hbs').innerHTML=P.filter(function(p){return p.isBest;}).map(function(p){return rPC(p);}).join('');
+    document.getElementById('htest').innerHTML=TESTS.map(function(t){return '<div class="p-6 sm:p-8 bg-cloud-50 rounded-2xl border border-cloud-200"><div class="flex gap-1 mb-4">'+Array(5).fill('<i data-lucide="star" class="w-4 h-4 text-gold-400 fill-gold-400"></i>').join('')+'</div><p class="text-sm text-cloud-500 leading-relaxed mb-6">'+t.t+'</p><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center"><span class="font-display text-sm text-teal-600">'+t.av+'</span></div><div><p class="text-sm font-medium text-teal-800">'+t.n+'</p><p class="text-xs text-cloud-400">'+t.l+'</p></div></div></div>';}).join('');
+    document.getElementById('hig').innerHTML=['wami-ig1','wami-ig2','wami-ig3','wami-ig4','wami-ig5','wami-ig6'].map(function(s){return '<div class="ig relative aspect-square overflow-hidden rounded-lg sm:rounded-xl cursor-pointer group"><img src="https://picsum.photos/seed/'+s+'/300/300.jpg" alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"><div class="igo absolute inset-0 bg-teal-800/50 flex items-center justify-center"><i data-lucide="instagram" class="w-6 h-6 text-white"></i></div></div>';}).join('');
+    document.getElementById('faq-list').innerHTML=FAQS.map(function(f){return '<div class="border border-cloud-300 rounded-xl overflow-hidden"><button onclick="this.nextElementSibling.classList.toggle(\'hidden\');this.querySelector(\'svg\').classList.toggle(\'rotate-180\')" class="flex items-center justify-between w-full p-4 text-left"><span class="text-sm font-semibold text-teal-800">'+f.q+'</span><i data-lucide="chevron-down" class="w-4 h-4 text-cloud-500 transition-transform duration-300 flex-shrink-0"></i></button><div class="hidden px-4 pb-4"><p class="text-sm text-cloud-500 leading-relaxed">'+f.a+'</p></div></div>';}).join('');
+}
+
+function rPC(p){var dc=p.op?gd(p.op,p.price):null,w=S.wish.includes(p.id);return '<div class="pc group cursor-pointer" onclick="nav_(\'product\',{productId:'+p.id+'})"><div class="relative aspect-[3/4] rounded-2xl overflow-hidden mb-3 bg-cloud-200"><img src="'+img(p.imgs[0],600,800)+'" alt="'+p.name+'" class="pi w-full h-full object-cover transition-transform duration-700" loading="lazy">'+(p.isNew?'<span class="absolute top-3 left-3 bg-white text-teal-700 text-[9px] tracking-[.15em] uppercase font-bold px-2.5 py-1 rounded-full">New</span>':'')+(dc?'<span class="absolute top-3 right-3 bg-teal-500 text-white text-[9px] tracking-wider font-bold px-2 py-1 rounded-full">-'+dc+'%</span>':'')+'<button onclick="event.stopPropagation();togW('+p.id+')" class="wb absolute top-3 '+(dc?'right-12':'right-3')+' w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all"><i data-lucide="heart" class="w-3.5 h-3.5 '+(w?'text-red-500 fill-red-500':'text-teal-700')+'"></i></button><div class="qa absolute bottom-3 left-3 right-3"><button onclick="event.stopPropagation();qAdd('+p.id+')" class="w-full bg-white/95 backdrop-blur-sm text-teal-700 py-2.5 rounded-xl text-[10px] tracking-[.1em] uppercase font-semibold hover:bg-white transition-colors shadow-lg">Quick Add</button></div></div><div class="px-1"><div class="flex gap-1.5 mb-1.5">'+p.colors.map(function(c){return '<span class="w-3 h-3 rounded-full border border-cloud-300" style="background:'+c.h+'"></span>';}).join('')+'</div><p class="font-display text-base sm:text-lg text-teal-800 leading-tight mb-1 group-hover:text-teal-600 transition-colors line-clamp-1">'+p.name+'</p><div class="flex items-center gap-2"><span class="text-sm text-teal-700 font-medium">'+fp(p.price)+'</span>'+(p.op?'<span class="text-xs text-cloud-400 line-through">'+fp(p.op)+'</span>':'')+'</div></div></div>';}
+
+function qAdd(pid){var p=P.find(function(x){return x.id===pid;});if(!p)return;var sz=p.sizes[Math.min(1,p.sizes.length-1)];var ex=S.cart.find(function(i){return i.pid===pid&&i.sz===sz&&i.cl===p.colors[0].n;});if(ex)ex.q++;else S.cart.push({pid:pid,sz:sz,cl:p.colors[0].n,q:1});svC();updB();toast(p.name+' added to bag','success');}
+
+function rShop(){
+    var cn={'all':'Shop All','party-wear':'Party Wear','western':'Western','modest-wear':'Modest Wear'};
+    document.getElementById('stl').textContent=cn[S.fil.category]||'Shop All';
+    document.getElementById('sbb').textContent=cn[S.fil.category]||'Shop All';
+    document.getElementById('fcat').innerHTML=['all','party-wear','western','modest-wear'].map(function(c){return '<button onclick="sFil(\'category\',\''+c+'\')" class="fc px-3 py-1.5 rounded-full border text-[11px] tracking-wide font-medium transition-all '+(S.fil.category===c?'active border-teal-600 bg-teal-600 text-white':'border-cloud-300 text-cloud-500 hover:border-teal-400')+'">'+cn[c]+'</button>';}).join('');
+    document.getElementById('fsiz').innerHTML=['all','XS','S','M','L','XL'].map(function(s){return '<button onclick="sFil(\'size\',\''+s+'\')" class="fc px-3 py-1.5 rounded-full border text-[11px] tracking-wide font-medium transition-all '+(S.fil.size===s?'active border-teal-600 bg-teal-600 text-white':'border-cloud-300 text-cloud-500 hover:border-teal-400')+'">'+(s==='all'?'All Sizes':s)+'</button>';}).join('');
+    var prs=[{k:'all',l:'All'},{k:'0-3000',l:'Under ₹3K'},{k:'3000-5000',l:'₹3K-₹5K'},{k:'5000-10000',l:'Above ₹5K'}];
+    document.getElementById('fprc').innerHTML=prs.map(function(pr){return '<button onclick="sFil(\'price\',\''+pr.k+'\')" class="fc px-3 py-1.5 rounded-full border text-[11px] tracking-wide font-medium transition-all '+(S.fil.price===pr.k?'active border-teal-600 bg-teal-600 text-white':'border-cloud-300 text-cloud-500 hover:border-teal-400')+'">'+pr.l+'</button>';}).join('');
+    var af='';if(S.fil.category!=='all')af+='<span class="inline-flex items-center gap-1 px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-[11px] font-medium">'+cn[S.fil.category]+'<button onclick="sFil(\'category\',\'all\')" class="ml-1 hover:text-teal-400">×</button></span>';if(S.fil.size!=='all')af+='<span class="inline-flex items-center gap-1 px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-[11px] font-medium">Size: '+S.fil.size+'<button onclick="sFil(\'size\',\'all\')" class="ml-1 hover:text-teal-400">×</button></span>';if(S.fil.price!=='all'){var lb=prs.find(function(x){return x.k===S.fil.price;});af+='<span class="inline-flex items-center gap-1 px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-[11px] font-medium">'+(lb?lb.l:'')+'<button onclick="sFil(\'price\',\'all\')" class="ml-1 hover:text-teal-400">×</button></span>';}
+    document.getElementById('afs').innerHTML=af;
+    var f=P.slice();if(S.fil.category!=='all')f=f.filter(function(p){return p.cat===S.fil.category;});if(S.fil.size!=='all')f=f.filter(function(p){return p.sizes.indexOf(S.fil.size)>-1;});if(S.fil.price!=='all'){var parts=S.fil.price.split('-').map(Number);var mn=parts[0],mx=parts[1];f=f.filter(function(p){return mx?(p.price>=mn&&p.price<=mx):(p.price>=mn);});}if(S.sort==='newest')f.sort(function(a,b){return (b.isNew?1:0)-(a.isNew?1:0);});else if(S.sort==='price-low')f.sort(function(a,b){return a.price-b.price;});else if(S.sort==='price-high')f.sort(function(a,b){return b.price-a.price;});
+    document.getElementById('spc').textContent=f.length+' product'+(f.length!==1?'s':'');
+    var g=document.getElementById('sprods'),e=document.getElementById('sempt');if(!f.length){g.innerHTML='';e.classList.remove('hidden');}else{e.classList.add('hidden');g.innerHTML=f.map(function(p){return rPC(p);}).join('');}
+}
+function sFil(t,v){S.fil[t]=v;rShop();}
+function clrF(){S.fil={category:'all',size:'all',price:'all'};S.sort='featured';document.getElementById('ssel').value='featured';rShop();}
+function togFP(){S.fo=!S.fo;document.getElementById('fpan').classList.toggle('hidden',!S.fo);}
+
+function rProd(){
+    var p=S.sp;if(!p)return;S.ssz=null;S.scl=p.colors[0]?p.colors[0].n:null;
+    var dc=p.op?gd(p.op,p.price):null;
+    var si=P.filter(function(x){return x.id!==p.id&&x.cat===p.cat;}).slice(0,4);
+    var rvP=S.rv.filter(function(id){return id!==p.id;}).slice(0,4).map(function(id){return P.find(function(x){return x.id===id;});}).filter(Boolean);
+    var ar=p.revs.length?((p.revs.reduce(function(s,r){return s+r.r;},0)/p.revs.length)).toFixed(1):'4.2';
+    var rd=[5,4,3,2,1].map(function(s){return p.revs.filter(function(r){return r.r===s;}).length;});
+    var mx=Math.max.apply(null,rd.concat([1]));
+    var thtml='<div class="mb-4"><p class="text-cloud-500 text-xs tracking-wide"><a href="#" onclick="nav_(\'home\');return false" class="hover:text-teal-600">Home</a> / <a href="#" onclick="nav_(\'shop\');return false" class="hover:text-teal-600">Shop</a> / <span class="text-teal-700">'+p.name+'</span></p></div>';
+    thtml+='<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12"><div><div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-cloud-200 mb-3 cursor-zoom-in" onclick="openZ(\''+img(p.imgs[0],1200,1600)+'\')"><img id="pimg" src="'+img(p.imgs[0],800,1067)+'" alt="'+p.name+'" class="w-full h-full object-cover">'+(dc?'<span class="absolute top-4 left-4 bg-teal-500 text-white text-[10px] tracking-wider font-bold px-3 py-1.5 rounded-full">-'+dc+'% OFF</span>':'')+(p.isNew?'<span class="absolute top-4 right-4 bg-white text-teal-700 text-[10px] tracking-[.15em] uppercase font-bold px-3 py-1.5 rounded-full">New Arrival</span>':'')+'</div><div class="grid grid-cols-4 gap-2">'+p.imgs.map(function(im,i){return '<button onclick="document.getElementById(\'pimg\').src=\''+img(im,800,1067)+'\';this.parentElement.querySelectorAll(\'button\').forEach(function(b){b.classList.remove(\'ring-2\',\'ring-teal-500\')});this.classList.add(\'ring-2\',\'ring-teal-500\')" class="aspect-square rounded-xl overflow-hidden bg-cloud-200 '+(i===0?'ring-2 ring-teal-500':'')+' hover:opacity-80 transition-opacity"><img src="'+img(im,200,200)+'" class="w-full h-full object-cover"></button>';}).join('')+'</div></div>';
+    thtml+='<div class="lg:py-4"><p class="text-gold-500 text-xs tracking-[.2em] uppercase font-medium mb-2">'+p.sub+'</p><h1 class="font-display text-3xl sm:text-4xl text-teal-800 font-light leading-tight mb-4">'+p.name+'</h1><div class="flex items-center gap-3 mb-5"><span class="text-2xl text-teal-700 font-medium">'+fp(p.price)+'</span>'+(p.op?'<span class="text-base text-cloud-400 line-through">'+fp(p.op)+'</span><span class="text-sm text-teal-500 font-medium">Save '+fp(p.op-p.price)+'</span>':'')+'</div>';
+    thtml+='<div class="flex items-center gap-3 mb-6 pb-6 border-b border-cloud-300"><div class="flex gap-0.5">'+[1,2,3,4,5].map(function(s){return '<i data-lucide="star" class="w-4 h-4 '+(s<=Math.round(ar)?'text-gold-400 fill-gold-400':'text-cloud-300')+'"></i>';}).join('')+'</div><span class="text-xs text-cloud-500">'+ar+' ('+p.revs.length+' reviews)</span></div>';
+    thtml+='<div class="mb-6"><p class="text-xs tracking-wide uppercase font-semibold text-teal-700 mb-3">Color: <span id="scn" class="font-normal text-cloud-500">'+p.colors[0].n+'</span></p><div class="flex gap-2.5">'+p.colors.map(function(c,i){return '<button onclick="selC(\''+c.n+'\',this)" class="w-8 h-8 rounded-full border-2 border-cloud-300 transition-all hover:scale-110 '+(i===0?'outline outline-2 outline-teal-600 outline-offset-2':'')+'" style="background:'+c.h+'"></button>';}).join('')+'</div></div>';
+    thtml+='<div class="mb-6"><div class="flex items-center justify-between mb-3"><p class="text-xs tracking-wide uppercase font-semibold text-teal-700">Size: <span id="ssn" class="font-normal text-cloud-500">Select a size</span></p><button onclick="openSG()" class="text-xs text-teal-600 hover:text-teal-400 underline flex items-center gap-1"><i data-lucide="ruler" class="w-3 h-3"></i> Size Guide</button></div><div class="flex flex-wrap gap-2">'+p.sizes.map(function(s){return '<button onclick="selS(\''+s+'\',this)" class="sb w-12 h-10 rounded-lg border-2 border-cloud-300 text-sm font-medium text-teal-700 hover:border-teal-400 transition-all">'+s+'</button>';}).join('')+'</div><p id="serr" class="text-xs text-red-500 mt-2 hidden">Please select a size</p></div>';
+    thtml+='<div class="flex gap-3 mb-6"><button onclick="addC()" class="flex-1 bg-teal-600 hover:bg-teal-500 text-white py-4 rounded-xl text-xs tracking-[.15em] uppercase font-semibold transition-all flex items-center justify-center gap-2"><i data-lucide="shopping-bag" class="w-4 h-4"></i> Add to Bag</button><button onclick="togW('+p.id+')" class="w-14 h-14 border-2 border-cloud-300 rounded-xl flex items-center justify-center '+(S.wish.includes(p.id)?'border-red-300 bg-red-50 text-red-500':'border-cloud-300 text-teal-600 hover:border-teal-400 transition-all')+'"><i data-lucide="heart" class="w-5 h-5 '+(S.wish.includes(p.id)?'fill-red-500':'')+'"></i></button></div>';
+    thtml+='<div class="grid grid-cols-3 gap-2 mb-6"><div class="text-center p-2.5 bg-cloud-100 rounded-xl"><i data-lucide="truck" class="w-4 h-4 text-teal-500 mx-auto mb-1"></i><p class="text-[9px] text-cloud-500 leading-tight">Complimentary<br>Shipping</p></div><div class="text-center p-2.5 bg-cloud-100 rounded-xl"><i data-lucide="shield-check" class="w-4 h-4 text-teal-500 mx-auto mb-1"></i><p class="text-[9px] text-cloud-500 leading-tight">Secure<br>Payment</p></div><div class="text-center p-2.5 bg-cloud-100 rounded-xl"><i data-lucide="rotate-ccw" class="w-4 h-4 text-teal-500 mx-auto mb-1"></i><p class="text-[9px] text-cloud-500 leading-tight">7-Day<br>Returns</p></div></div>';
+    thtml+='<div class="border-t border-cloud-300"><div class="flex gap-6"><button onclick="swTab(\'det\',this)" class="tb active text-sm font-medium text-teal-700 border-b-2 border-teal-600 py-4">Details</button><button onclick="swTab(\'rev\',this)" class="tb text-sm font-medium text-cloud-500 border-b-2 border-transparent py-4 hover:text-teal-600">Reviews ('+p.revs.length+')</button><button onclick="swTab(\'shp\',this)" class="tb text-sm font-medium text-cloud-500 border-b-2 border-transparent py-4 hover:text-teal-600">Shipping</button></div>';
+    thtml+='<div id="t-det" class="py-5"><p class="text-sm text-cloud-500 leading-relaxed mb-4">'+p.desc+'</p><div class="grid grid-cols-2 gap-x-4 gap-y-2 text-xs text-cloud-500"><span class="text-teal-700 font-medium">Fit</span><span>'+p.fit+'</span><span class="text-teal-700 font-medium">Fabric</span><span>'+p.fab+'</span><span class="text-teal-700 font-medium">Care</span><span>'+p.care+'</span><span class="text-teal-700 font-medium">Length</span><span>'+p.len+'</span></div></div>';
+    thtml+='<div id="t-rev" class="py-5 hidden"><div class="flex items-start gap-6 mb-6 pb-6 border-b border-cloud-200"><div class="text-center"><p class="font-display text-4xl text-teal-800">'+ar+'</p><div class="flex gap-0.5 mt-1 justify-center">'+[1,2,3,4,5].map(function(s){return '<i data-lucide="star" class="w-3 h-3 '+(s<=Math.round(ar)?'text-gold-400 fill-gold-400':'text-cloud-300')+'"></i>';}).join('')+'</div></div><div class="flex-1 space-y-1.5">'+[5,4,3,2,1].map(function(s,i){return '<div class="flex items-center gap-2"><span class="text-[10px] text-cloud-500 w-3">'+s+'</span><div class="rb flex-1"><div class="rbf" style="width:'+((rd[i]/mx)*100)+'%"></div></div></div>';}).join('')+'</div></div><div class="space-y-5">'+p.revs.map(function(r){return '<div class="pb-5 border-b border-cloud-100 last:border-0"><div class="flex items-center justify-between mb-2"><div class="flex items-center gap-2"><span class="font-medium text-sm text-teal-800">'+r.n+'</span><div class="flex gap-0.5">'+[1,2,3,4,5].map(function(s){return '<i data-lucide="star" class="w-3 h-3 '+(s<=r.r?'text-gold-400 fill-gold-400':'text-cloud-300')+'"></i>';}).join('')+'</div></div><span class="text-[10px] text-cloud-400">'+r.d+'</span></div><p class="text-sm text-cloud-500 leading-relaxed">'+r.t+'</p></div>';}).join('')+'</div></div>';
+    thtml+='<div id="t-shp" class="py-5 hidden"><div class="space-y-4"><div class="flex items-start gap-3"><i data-lucide="truck" class="w-5 h-5 text-teal-500 mt-0.5 flex-shrink-0"></i><div><p class="text-sm font-medium text-teal-800 mb-1">Complimentary Shipping</p><p class="text-xs text-cloud-500">5-7 business days India.</p></div></div><div class="flex items-start gap-3"><i data-lucide="globe" class="w-5 h-5 text-teal-500 mt-0.5 flex-shrink-0"></i><div><p class="text-sm font-medium text-teal-800 mb-1">International</p><p class="text-xs text-cloud-500">USA, UK, UAE, Australia. 10-14 days.</p></div></div><div class="flex items-start gap-3"><i data-lucide="rotate-ccw" class="w-5 h-5 text-teal-500 mt-0.5 flex-shrink-0"></i><div><p class="text-sm font-medium text-teal-800 mb-1">Easy Returns</p><p class="text-xs text-cloud-500">7-day return, unworn with tags.</p></div></div></div></div></div></div></div>';
+    if(si.length)thtml+='<div class="mt-16 sm:mt-24"><h2 class="font-display text-2xl sm:text-3xl text-teal-800 font-light mb-8">Style It With</h2><div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">'+si.map(function(x){return rPC(x);}).join('')+'</div></div>';
+    if(rvP.length)thtml+='<div class="mt-16 sm:mt-24"><h2 class="font-display text-2xl sm:text-3xl text-teal-800 font-light mb-8">Recently Viewed</h2><div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">'+rvP.map(function(x){return rPC(x);}).join('')+'</div></div>';
+    document.getElementById('pdet').innerHTML=thtml;
+}
+
+function swTab(t,btn){document.querySelectorAll('.tb').forEach(function(b){b.classList.remove('active');b.style.color='';b.style.borderColor='transparent';});btn.classList.add('active');btn.style.color='#1E5C5C';btn.style.borderColor='#1E5C5C';['det','rev','shp'].forEach(function(x){var e=document.getElementById('t-'+x);if(e)e.classList.toggle('hidden',x!==t);});}
+function selC(n,btn){S.scl=n;document.getElementById('scn').textContent=n;btn.parentElement.querySelectorAll('button').forEach(function(b){b.style.outline='none';b.style.outlineOffset='0';});btn.style.outline='2px solid #1E5C5C';btn.style.outlineOffset='2px';}
+function selS(s,btn){S.ssz=s;document.getElementById('ssn').textContent=s;document.getElementById('serr').classList.add('hidden');btn.parentElement.querySelectorAll('.sb').forEach(function(b){b.classList.remove('active');});btn.classList.add('active');}
+function addC(){var p=S.sp;if(!S.ssz){document.getElementById('serr').classList.remove('hidden');return;}var ex=S.cart.find(function(i){return i.pid===p.id&&i.sz===S.ssz&&i.cl===S.scl;});if(ex)ex.q++;else S.cart.push({pid:p.id,sz:S.ssz,cl:S.scl,q:1});svC();updB();toast(p.name+' added to bag','success');}
+function openSG(){var m=document.getElementById('sgm');m.style.display='flex';m.classList.remove('hidden');lucide.createIcons();}
+function closeSG(){var m=document.getElementById('sgm');m.style.display='none';m.classList.add('hidden');}
+function openZ(src){document.getElementById('zmi').src=src;var m=document.getElementById('zm');m.style.display='flex';m.classList.remove('hidden');lucide.createIcons();}
+function closeZ(){var m=document.getElementById('zm');m.style.display='none';m.classList.add('hidden');}
+function openFQ(){var m=document.getElementById('fqm');m.style.display='flex';m.classList.remove('hidden');lucide.createIcons();}
+function closeFQ(){var m=document.getElementById('fqm');m.style.display='none';m.classList.add('hidden');}
+
+function togCart(){S.co=!S.co;var d=document.getElementById('cd');if(S.co){d.classList.remove('hidden');document.body.style.overflow='hidden';rCD();lucide.createIcons();}else{d.classList.add('hidden');document.body.style.overflow='';}}
+
+function rCD(){
+    var it=document.getElementById('ci'),ft=document.getElementById('cf');
+    if(!S.cart.length){it.innerHTML='<div class="flex flex-col items-center justify-center h-full text-center"><i data-lucide="shopping-bag" class="w-12 h-12 text-cloud-400 mb-4"></i><p class="font-display text-xl text-teal-800 mb-2">Your bag is empty</p><p class="text-sm text-cloud-500 mb-6">Discover our collections</p><button onclick="togCart();nav_(\'shop\')" class="bg-teal-600 hover:bg-teal-500 text-white px-6 py-3 rounded-full text-xs tracking-[.15em] uppercase font-medium transition-colors">Shop Now</button></div>';ft.innerHTML='';lucide.createIcons();return;}
+    var sub=0;
+    it.innerHTML=S.cart.map(function(item,i){var p=P.find(function(x){return x.id===item.pid;});if(!p)return '';var t=p.price*item.q;sub+=t;return '<div class="flex gap-4 mb-5 pb-5 border-b border-cloud-200 last:border-0"><div class="w-20 h-24 rounded-xl overflow-hidden bg-cloud-200 flex-shrink-0 cursor-pointer" onclick="togCart();nav_(\'product\',{productId:'+p.id+'})"><img src="'+img(p.imgs[0],200,260)+'" class="w-full h-full object-cover"></div><div class="flex-1 min-w-0"><p class="font-display text-sm text-teal-800 leading-tight mb-1 truncate">'+p.name+'</p><p class="text-xs text-cloud-500 mb-2">'+item.cl+' · '+item.sz+'</p><p class="text-sm text-teal-700 font-medium mb-3">'+fp(t)+'</p><div class="flex items-center gap-2"><button onclick="uCQ('+i+',-1)" class="w-7 h-7 border border-cloud-300 rounded-lg flex items-center justify-center text-cloud-500 hover:border-teal-400">−</button><span class="text-sm font-medium w-6 text-center">'+item.q+'</span><button onclick="uCQ('+i+',1)" class="w-7 h-7 border border-cloud-300 rounded-lg flex items-center justify-center text-cloud-500 hover:border-teal-400">+</button></div></div><button onclick="rFC('+i+')" class="text-cloud-400 hover:text-red-500 self-start"><i data-lucide="x" class="w-4 h-4"></i></button></div>';}).join('');
+    ft.innerHTML='<div class="flex justify-between mb-2"><span class="text-sm text-cloud-500">Subtotal</span><span class="text-sm text-teal-700 font-medium">'+fp(sub)+'</span></div><div class="flex justify-between mb-4"><span class="text-sm text-cloud-500">Shipping</span><span class="text-sm text-teal-600 font-medium">FREE</span></div><div class="flex justify-between pt-4 border-t border-cloud-300 mb-6"><span class="text-base font-semibold text-teal-800">Total</span><span class="text-base font-semibold text-teal-800">'+fp(sub)+'</span></div><button onclick="togCart();nav_(\'checkout\')" class="w-full bg-teal-600 hover:bg-teal-500 text-white py-4 rounded-xl text-xs tracking-[.15em] uppercase font-semibold transition-all">Proceed to Checkout</button><p class="text-center text-[10px] text-cloud-400 mt-3">Complimentary shipping on all orders</p>';
+    lucide.createIcons();
+}
+function uCQ(i,d){S.cart[i].q+=d;if(S.cart[i].q<=0)S.cart.splice(i,1);svC();updB();rCD();}
+function rFC(i){S.cart.splice(i,1);svC();updB();rCD();toast('Item removed','info');}
+
+function updB(){var c=S.cart.reduce(function(s,i){return s+i.q;},0);var b=document.getElementById('cb');b.textContent=c;b.classList.toggle('hidden',c===0);var w=document.getElementById('wb');w.textContent=S.wish.length;w.classList.toggle('hidden',S.wish.length===0);}
+
+function rCheck(){
+    if(!S.cart.length){nav_('shop');return;}
+    var sub=0;S.cart.forEach(function(i){var p=P.find(function(x){return x.id===i.pid;});if(p)sub+=p.price*i.q;});
+    var h='<div class="mb-6"><p class="text-cloud-500 text-xs tracking-wide"><a href="#" onclick="nav_(\'home\');return false" class="hover:text-teal-600">Home</a> / <span class="text-teal-700">Checkout</span></p></div>';
+    h+='<div class="flex items-center justify-between mb-8"><h1 class="font-display text-3xl sm:text-4xl text-teal-800 font-light">Checkout</h1><a href="#" onclick="nav_(\'shop\');return false" class="text-xs text-teal-600 hover:text-teal-400 flex items-center gap-1"><i data-lucide="arrow-left" class="w-3 h-3"></i> Continue Shopping</a></div>';
+    h+='<div class="flex items-center gap-3 mb-10"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-teal-600 text-white text-xs font-bold flex items-center justify-center">1</div><span class="text-xs font-medium text-teal-700">Shipping</span></div><div class="w-8 h-px bg-cloud-300"></div><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-cloud-200 text-cloud-500 text-xs font-bold flex items-center justify-center">2</div><span class="text-xs font-medium text-cloud-500">Payment</span></div></div>';
+    h+='<div class="grid grid-cols-1 lg:grid-cols-3 gap-8"><div class="lg:col-span-2"><div class="bg-white rounded-2xl border border-cloud-200 p-6 mb-6"><h2 class="text-sm font-semibold text-teal-700 mb-4">Shipping Information</h2>';
+    h+='<form onsubmit="placeOrd(event)"><div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4"><div><label class="text-xs text-cloud-500 mb-1 block">First Name *</label><input type="text" required class="w-full px-4 py-3 border border-cloud-300 rounded-xl text-sm"></div><div><label class="text-xs text-cloud-500 mb-1 block">Last Name *</label><input type="text" required class="w-full px-4 py-3 border border-cloud-300 rounded-xl text-sm"></div></div>';
+    h+='<div class="mb-4"><label class="text-xs text-cloud-500 mb-1 block">Email *</label><input type="email" required class="w-full px-4 py-3 border border-cloud-300 rounded-xl text-sm"></div>';
+    h+='<div class="mb-4"><label class="text-xs text-cloud-500 mb-1 block">Phone *</label><input type="tel" required class="w-full px-4 py-3 border border-cloud-300 rounded-xl text-sm"></div>';
+    h+='<div class="mb-4"><label class="text-xs text-cloud-500 mb-1 block">Address *</label><input type="text" required class="w-full px-4 py-3 border border-cloud-300 rounded-xl text-sm"></div>';
+    h+='<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4"><div><label class="text-xs text-cloud-500 mb-1 block">City *</label><input type="text" required class="w-full px-4 py-3 border border-cloud-300 rounded-xl text-sm"></div><div><label class="text-xs text-cloud-500 mb-1 block">State *</label><input type="text" required class="w-full px-4 py-3 border border-cloud-300 rounded-xl text-sm"></div><div class="col-span-2 sm:col-span-1"><label class="text-xs text-cloud-500 mb-1 block">PIN Code *</label><input type="text" required class="w-full px-4 py-3 border border-cloud-300 rounded-xl text-sm"></div></div>';
+    h+='<h2 class="text-sm font-semibold text-teal-700 mb-4 pt-4 border-t border-cloud-200">Payment Method</h2>';
+    h+='<div class="space-y-3 mb-6"><label class="po active flex items-center gap-3 p-4 border-2 border-cloud-200 rounded-xl cursor-pointer" onclick="selPay(this)"><div class="pr"><div></div></div><p class="text-sm text-teal-800">Credit/Debit Card</p></label><label class="po flex items-center gap-3 p-4 border-2 border-cloud-200 rounded-xl cursor-pointer" onclick="selPay(this)"><div class="pr"><div></div></div><p class="text-sm text-teal-800">UPI</p></label><label class="po flex items-center gap-3 p-4 border-2 border-cloud-200 rounded-xl cursor-pointer" onclick="selPay(this)"><div class="pr"><div></div></div><p class="text-sm text-teal-800">Klarna (3 interest-free payments)</p></label></div>';
+    h+='<div id="cfields" class="space-y-4 mb-6"><div><label class="text-xs text-cloud-500 mb-1 block">Card Number</label><input type="text" placeholder="1234 5678 9012 3456" class="w-full px-4 py-3 border border-cloud-300 rounded-xl text-sm"></div><div class="grid grid-cols-2 gap-4"><div><label class="text-xs text-cloud-500 mb-1 block">Expiry</label><input type="text" placeholder="MM/YY" class="w-full px-4 py-3 border border-cloud-300 rounded-xl text-sm"></div><div><label class="text-xs text-cloud-500 mb-1 block">CVV</label><input type="text" placeholder="123" class="w-full px-4 py-3 border border-cloud-300 rounded-xl text-sm"></div></div></div>';
+    h+='<button type="submit" class="w-full bg-teal-600 hover:bg-teal-500 text-white py-4 rounded-xl text-xs tracking-[.15em] uppercase font-semibold transition-all flex items-center justify-center gap-2"><i data-lucide="lock" class="w-4 h-4"></i> Place Order — '+fp(sub)+'</button><div class="flex items-center justify-center gap-4 mt-4 text-[10px] text-cloud-400"><span class="flex items-center gap-1"><i data-lucide="shield-check" class="w-3 h-3"></i> PCI-DSS</span><span class="flex items-center gap-1"><i data-lucide="lock" class="w-3 h-3"></i> SSL</span></div></form></div></div>';
+    h+='<div><div class="bg-white rounded-2xl border border-cloud-200 p-6 sticky top-28"><h3 class="text-sm font-semibold text-teal-700 mb-4">Order Summary</h3><div class="space-y-3 mb-4 max-h-60 overflow-y-auto">'+S.cart.map(function(item){var p=P.find(function(x){return x.id===item.pid;});if(!p)return '';return '<div class="flex gap-3"><div class="w-14 h-16 rounded-lg overflow-hidden bg-cloud-200 flex-shrink-0"><img src="'+img(p.imgs[0],120,150)+'" class="w-full h-full object-cover"></div><div class="flex-1 min-w-0"><p class="text-xs text-teal-800 truncate">'+p.name+'</p><p class="text-[10px] text-cloud-500">'+item.cl+' · '+item.sz+' × '+item.q+'</p></div><span class="text-xs font-medium text-teal-700">'+fp(p.price*item.q)+'</span></div>';}).join('')+'</div>';
+    h+='<div class="border-t border-cloud-200 pt-4 space-y-2"><div class="flex justify-between text-xs"><span class="text-cloud-500">Subtotal</span><span class="text-teal-700">'+fp(sub)+'</span></div><div class="flex justify-between text-xs"><span class="text-cloud-500">Shipping</span><span class="text-teal-600 font-medium">FREE</span></div><div class="flex justify-between pt-2 border-t border-cloud-200"><span class="text-sm font-semibold text-teal-800">Total</span><span class="text-sm font-semibold text-teal-800">'+fp(sub)+'</span></div></div>';
+    if(sub>=3000)h+='<div class="mt-4 p-3 bg-teal-50 rounded-xl flex items-start gap-2"><i data-lucide="info" class="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0"></i><p class="text-[11px] text-teal-600 leading-relaxed">Pay in 3 interest-free instalments of <strong>'+fp(Math.ceil(sub/3))+'</strong> with Klarna</p></div>';
+    h+='</div></div></div>';
+    document.getElementById('ccon').innerHTML=h;lucide.createIcons();
+}
+
+function selPay(el){el.closest('.space-y-3').querySelectorAll('.po').forEach(function(o){o.classList.remove('active');});el.classList.add('active');var cf=document.getElementById('cfields');if(cf)cf.style.display=el.querySelector('p').textContent.indexOf('Card')>-1?'block':'none';}
+function placeOrd(e){e.preventDefault();var on='WMI'+Date.now().toString(36).toUpperCase();S.cart=[];svC();updB();nav_('confirmation',{orderNumber:on});}
+
+function rConf(){
+    var on=S.vd.orderNumber||'WMI-XXXXX';
+    document.getElementById('ocon').innerHTML='<div class="text-center afu"><div class="w-20 h-20 mx-auto mb-6 rounded-full bg-teal-50 flex items-center justify-center"><i data-lucide="check" class="w-10 h-10 text-teal-500"></i></div><p class="text-gold-500 text-xs tracking-[.2em] uppercase font-medium mb-3">Order Confirmed</p><h1 class="font-display text-3xl sm:text-4xl text-teal-800 font-light mb-4">Thank You!</h1><p class="text-cloud-500 text-sm leading-relaxed mb-2">Your order has been placed successfully.</p><p class="text-sm text-teal-700 font-medium mb-8">Order: <span class="font-mono">'+on+'</span></p><div class="bg-white rounded-2xl border border-cloud-200 p-6 text-left mb-8"><h3 class="text-sm font-semibold text-teal-700 mb-4">What\'s Next?</h3><div class="space-y-4"><div class="flex items-start gap-3"><div class="w-7 h-7 rounded-full bg-teal-50 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-xs font-bold text-teal-600">1</span></div><div><p class="text-sm text-teal-800 font-medium">Confirmation Sent</p><p class="text-xs text-cloud-500">Email and WhatsApp sent</p></div></div><div class="flex items-start gap-3"><div class="w-7 h-7 rounded-full bg-teal-50 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-xs font-bold text-teal-600">2</span></div><div><p class="text-sm text-teal-800 font-medium">Order Processing</p><p class="text-xs text-cloud-500">We will prepare your order</p></div></div><div class="flex items-start gap-3"><div class="w-7 h-7 rounded-full bg-teal-50 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-xs font-bold text-teal-600">3</span></div><div><p class="text-sm text-teal-800 font-medium">Shipped</p><p class="text-xs text-cloud-500">Tracking details via WhatsApp</p></div></div><div class="flex items-start gap-3"><div class="w-7 h-7 rounded-full bg-teal-50 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-xs font-bold text-teal-600">4</span></div><div><p class="text-sm text-teal-800 font-medium">Delivered</p><p class="text-xs text-cloud-500">Enjoy your WAMI pieces!</p></div></div></div></div><div class="flex flex-col sm:flex-row gap-3 justify-center"><button onclick="nav_(\'home\')" class="bg-teal-600 hover:bg-teal-500 text-white px-8 py-3 rounded-full text-xs tracking-[.15em] uppercase font-semibold transition-all">Continue Shopping</button><a href="https://wa.me/919876543210?text=Hi! Order '+on+'" target="_blank" class="border border-green-500 text-green-600 hover:bg-green-50 px-8 py-3 rounded-full text-xs tracking-[.15em] uppercase font-semibold transition-all flex items-center justify-center gap-2"><i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp</a></div></div>';
+    lucide.createIcons();
+}
+
+function toast(msg,type){
+    var t='success';if(type)t=type;
+    var c=document.getElementById('tc');var d=document.createElement('div');
+    d.className='toast-enter pointer-events-auto px-5 py-3 rounded-xl shadow-lg text-sm font-medium flex items-center gap-2 '+(t==='success'?'bg-teal-600 text-white':'bg-cloud-200 text-teal-800');
+    d.innerHTML='<i data-lucide="'+(t==='success'?'check-circle':'info')+'" class="w-4 h-4 flex-shrink-0"></i>'+msg;
+    c.appendChild(d);lucide.createIcons();
+    setTimeout(function(){d.classList.remove('toast-enter');d.classList.add('toast-exit');setTimeout(function(){d.remove();},300);},2500);
+}
+
+function doNL(e){e.preventDefault();toast('Welcome to the WAMI Club!','success');e.target.reset();}
+
+setTimeout(function(){if(!localStorage.getItem('wck'))document.getElementById('ckb').classList.add('show');},2000);
+document.querySelectorAll('#ckb button').forEach(function(b){b.addEventListener('click',function(){localStorage.setItem('wck','1');});});
+
+var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');}});},{threshold:0.2});
+document.querySelectorAll('.feature-panel').forEach(function(el){observer.observe(el);});
+
+window.addEventListener('load',function(){setTimeout(function(){var l=document.getElementById('loader');l.style.opacity='0';setTimeout(function(){l.style.display='none';updN();render();},500);},800);});
+</script>
+</body>
+</html>
